@@ -1,6 +1,7 @@
 # Telecom Customer Churn Prediction
 ![Telecom-Customer-Churn-Prediction](https://github.com/shirinshaik/Machine-Learning_classification-Customer-Churn-Rate_Project/assets/113626760/6ab16947-388f-4cd1-9ae7-afe716f6616f)
 Image Source: https://pixabay.com/illustrations/family-customer-target-group-ball-563968/
+
 Dataset Source: https://www.kaggle.com/blastchar/telco-customer-churn
 
 ## Objective
