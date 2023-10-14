@@ -1,5 +1,5 @@
 # Telecom Customer Churn Prediction
-![ROC](https://github.com/shirinshaik/Machine-Learning_classification-Customer-Churn-Rate_Project/assets/113626760/21c80a30-6692-476e-94bd-3b80bdddb911)
+![Telecom-Customer-Churn-Prediction](https://github.com/shirinshaik/Machine-Learning_classification-Customer-Churn-Rate_Project/assets/113626760/6ab16947-388f-4cd1-9ae7-afe716f6616f)
 
 ## Objective
 The main objective of this project is to develop a predictive model that can identify potential customer churn in a subscription-based business. Customer churn is a critical metric for any subscription-based service, as it directly impacts revenue and growth. By accurately predicting churn, businesses can take proactive measures to retain valuable customers.
@@ -66,6 +66,8 @@ In this task, we leverage various visualization techniques to gain deeper insigh
 By employing these visualization techniques, we enhance our understanding of the dataset, uncovering meaningful relationships and patterns that contribute to a more comprehensive exploratory data analysis. These visualizations serve as crucial tools for making informed decisions in subsequent stages of the project.
 
 ### Task 4: IDENTIFY FEATURE IMPORTANCE & PREPARE THE DATA BEFORE MODEL TRAINING
+![Feature-Importance](https://github.com/shirinshaik/Machine-Learning_classification-Customer-Churn-Rate_Project/assets/113626760/6b9ab8b9-3c56-42d3-94a3-0bad70af578b)
+
 In this step, we focus on identifying feature importance and preparing the data for model training. This is a critical stage in building a machine learning model, as unnecessary features can negatively impact training speed, model interpretability, and its ability to generalize to new data.
 
 First, we begin by considering the dataset 'telecom_df'. We drop certain features, specifically "class", "area_code", and "phone_number", as they are deemed irrelevant for training the model. The "class" feature serves as our target variable, so it is separated and assigned to 'y'. Meanwhile, the remaining features, excluding the aforementioned ones, are designated as input features and assigned to 'X'.
@@ -75,6 +77,8 @@ Next, to evaluate the model's performance, we perform a train/test split on the 
 Finally, a verification step is recommended to ensure that the train/test split was executed successfully. This helps confirm that the data has been appropriately divided, enabling us to proceed with training and evaluating the model.
 
 ### Task 5: TRAIN AND EVALUATE A LOGISTIC REGRESSION CLASSIFIER
+![LR](https://github.com/shirinshaik/Machine-Learning_classification-Customer-Churn-Rate_Project/assets/113626760/1f75f1b6-a60f-433b-958b-6e1323c3e11f)
+
 In this step, we employ a logistic regression classifier to build a predictive model. Logistic regression is a widely used algorithm for binary classification tasks. We start by importing necessary modules including LogisticRegression for model creation and classification_report along with confusion_matrix for performance evaluation.
 
 After initializing and training the logistic regression model on the training data, we make predictions on the test set. The results are stored in y_predict. Subsequently, we generate a detailed classification report which provides key metrics on the model's performance.
@@ -84,6 +88,8 @@ From the report, we note that the accuracy stands at 82%. Precision values for '
 Examining the confusion matrix, we find that 120 samples have been misclassified. This substantial number may contribute to the lower accuracy, precision, and recall scores observed.
 
 ### Task 6: TRAIN AND EVALUATE A SUPPORT VECTOR MACHINE CLASSIFIER
+![SVM](https://github.com/shirinshaik/Machine-Learning_classification-Customer-Churn-Rate_Project/assets/113626760/98f82146-e40f-4261-b184-5c3dfec148ae)
+
 In this step, we implement a Support Vector Machine (SVM) classifier for binary classification. First, we import necessary modules including LinearSVC for SVM classification and CalibratedClassifierCV to calibrate the classifier for probability score output.
 
 The SVM model is trained on the training data and subsequently used to make predictions on the test set. The classification report provides a detailed summary of the model's performance, including precision, recall, and F1-scores for both 'class 0' and 'class 1'.
@@ -93,6 +99,8 @@ Upon evaluation, we observe that the classifier has achieved suboptimal performa
 Additionally, the confusion matrix illustrates that 9 samples in 'class 0' and 100 samples in 'class 1' have been misclassified. By employing CalibratedClassifierCV, we marginally improve the classifier's performance, resulting in an increase in correctly classified data points from '9' to '26' in 'class 1'.
 
 ### Task 7: TRAIN AND EVALUATE A RANDOM FOREST CLASSIFIER
+![RF](https://github.com/shirinshaik/Machine-Learning_classification-Customer-Churn-Rate_Project/assets/113626760/50112c79-a5ab-4b7b-be1d-2af74d412bc9)
+
 In this step, we employ a Random Forest Classifier for binary classification. The model is trained on the training data and then tested on the validation set. The resulting classification report provides a detailed breakdown of precision, recall, and F1-scores for both 'class 0' and 'class 1'.
 
 The evaluation demonstrates that the Random Forest Classifier outperforms previous models. It achieves an impressive accuracy of 97%, with high precision for both 'class 0' (97%) and 'class 1' (95%). Recall rates are also commendable, particularly for 'class 0' (99%), although slightly lower for 'class 1' (78%). The F1 scores indicate a robust balance between precision and recall.
@@ -100,6 +108,8 @@ The evaluation demonstrates that the Random Forest Classifier outperforms previo
 Upon examining the confusion matrix, we observe that only 5 samples in 'class 0' and 29 samples in 'class 1' have been misclassified. This showcases the substantial improvement in performance compared to earlier classifiers.
 
 ### Task 8: TRAIN AND EVALUATE A K-NEAREST NEIGHBOUR (KNN)
+![KNN](https://github.com/shirinshaik/Machine-Learning_classification-Customer-Churn-Rate_Project/assets/113626760/e0ca6b26-40a1-44b6-b9a6-9a194bc51d7a)
+
 In this step, a K-Nearest Neighbour (KNN) Classifier is trained on the data and assessed on the validation set. The classification report provides detailed metrics including precision, recall, and F1-scores for both 'class 0' and 'class 1'.
 
 The KNN model exhibits respectable performance with an accuracy of 89%. Precision for 'class 0' and 'class 1' is 90% and 68% respectively. However, recall rates are noticeably lower, particularly for 'class 1' at 32%. The F1 scores indicate a reasonable balance between precision and recall, but it is still outperformed by the Random Forest Classifier.
@@ -107,6 +117,8 @@ The KNN model exhibits respectable performance with an accuracy of 89%. Precisio
 In the confusion matrix, we note that 91 samples in 'class 1' and 20 samples in 'class 0' have been misclassified. While KNN demonstrates improved performance compared to SVM, it still falls short of the Random Forest Classifier.
 
 ### Task 9: TRAIN AND EVALUATE A NAIVE BAYES CLASSIFIER
+![NB](https://github.com/shirinshaik/Machine-Learning_classification-Customer-Churn-Rate_Project/assets/113626760/ccd5478b-bc31-4704-9165-7ee9ec66cc95)
+
 In this step, a Naive Bayes Classifier, specifically the Gaussian Naive Bayes model, is trained and assessed on the validation set. The classification report provides detailed metrics including precision, recall, and F1-scores for both 'class 0' and 'class 1'.
 
 The Gaussian Naive Bayes model demonstrates an accuracy of 88%, indicating a reasonable performance. However, it falls slightly short of the Random Forest Classifier. Precision for 'class 0' and 'class 1' is 94% and 53% respectively, while recall rates are 92% and 59% respectively. The F1 scores reflect a relatively balanced trade-off between precision and recall.
@@ -114,11 +126,15 @@ The Gaussian Naive Bayes model demonstrates an accuracy of 88%, indicating a rea
 The confusion matrix shows that 71 samples in 'class 0' and 54 samples in 'class 1' have been misclassified. While the Gaussian Naive Bayes model offers a respectable performance, it is not as robust as the Random Forest Classifier.
 
 ### Task 10: PLOT ROC CURVES FOR THE 5 MODELS AND FIND AUC SCORES
+![ROC-intuition](https://github.com/shirinshaik/Machine-Learning_classification-Customer-Churn-Rate_Project/assets/113626760/c74288bd-b8cb-4fca-ad40-80e413d72cc4)
+
 In this task, ROC curves and AUC scores were generated for five different models: Logistic Regression, Support Vector Machine (SVM), Random Forest, K-Nearest Neighbors (KNN), and Naive Bayes. The ROC curves provide a visual representation of the model's performance, illustrating the trade-off between true positive rate (sensitivity) and false positive rate.
+![AUC](https://github.com/shirinshaik/Machine-Learning_classification-Customer-Churn-Rate_Project/assets/113626760/b7fba582-b221-4af7-9724-f5b1e3d0b077)
 
 The AUC scores quantify the model's ability to distinguish between the two classes. Among the models, Random Forest achieved the highest AUC score of 0.92, indicating superior performance in classifying churned and retained telecom customers. The worst performer was K-Nearest Neighbors with an AUC score of 0.70.
 
 The ROC curve plot visually reinforces the Random Forest model's effectiveness, as it exhibits the highest curve, followed by SVM. This graphically confirms that Random Forest outperformed the other models in terms of classifying customers.
+![ROC](https://github.com/shirinshaik/Machine-Learning_classification-Customer-Churn-Rate_Project/assets/113626760/82902c72-658c-48ec-8d9e-6a8f8d38790b)
 
 Overall, this analysis confirms the Random Forest model as the most reliable classifier for this particular dataset, reinforcing earlier findings in the classification reports and confusion matrices.
 
